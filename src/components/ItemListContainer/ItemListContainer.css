@@ -1,0 +1,11 @@
+.products{
+    padding: 2rem;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+
+.products h1 {
+    grid-column: 1 / -1; /* hace que ocupe las 3 columnas */
+    text-align: center;  /* opcional */
+}

@@ -1,0 +1,18 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.AppContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* altura mínima de toda la pantalla */
+  min-width: 100vw;
+}
+
+.MainContent {
+  flex: 1; /* ocupa todo el espacio disponible entre header y footer */
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center;     /* centra verticalmente */
+}
