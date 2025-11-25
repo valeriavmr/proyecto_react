@@ -1,0 +1,25 @@
+.admin-btn button {
+    background-color: #f0ad4e;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.admin-btn button:hover {
+    background-color: #ec971f;
+}
+
+.admin-btn{
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}

@@ -1,26 +1,20 @@
-import { ItemList } from "../ItemList/ItemList"
-import {useState, useEffect} from "react"
+import { useParams } from "react-router-dom";
+import { ItemList } from "../ItemList/ItemList";
+import {useState, useEffect} from "react";
+import { getProducts } from "../../services/products";
+
 
 export const ItemListContainer = () =>{
     //estado
 
     const [products, setProducts] = useState([]);
+    const {category} = useParams();
 
     //llamada a una api
-    useEffect((()=>{
-        fetch('/data/productos.json').then((res)=>{
-            if(!res.ok){
-                throw new Error("Hubo un problema al buscar productos");
-            }
-            return res.json();
-        }).then(
-            (data)=>{
-                setProducts(data);
-            }
-        ).catch((err)=>{
+    useEffect((()=>{getProducts(category).then((data)=>{setProducts(data)}).catch((err)=>{
             console.log(err);
         })
-    }),[]);
+    }),[category]);
 
     return (
         <section className="products">

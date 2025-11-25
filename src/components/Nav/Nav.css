@@ -4,6 +4,8 @@ ul {
     flex-direction: row;
     justify-content: space-between;
     padding-inline-end: 1rem;
+    margin: 0;
+    padding-bottom: 2em;
 }
 
 span.cart-badge {
@@ -18,4 +20,17 @@ span.cart-badge {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.login img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.admin-btns {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 }
